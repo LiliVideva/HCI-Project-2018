@@ -10,16 +10,16 @@
     <title>Математика за матура</title>
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/loginForm.css" rel="stylesheet">
+    <link href="./css/indexRegistered.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body>
 
     <header>
 
-     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
 
-        <a class="navbar-brand" href="./index.html">Математика за матура</a>
+        <a class="navbar-brand" href="./indexRegistered.html">Математика за матура</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -28,49 +28,48 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Начало</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="./indexRegistered.html">Начало<span class="sr-only">(current)</span></a>
+            </li>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="./mainRegistered.html">Дялове на математиката</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="./noSolutionTasksRegistered.html">Задачи без решения</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">Дялове на математиката</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Задачи без решения</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Премиум пакет</a>
+              <a class="nav-link" href="./premiumPackageRegistered.html">Премиум пакет</a>
             </li>
           </ul>
 
           <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" href="./loginForm.html"><img src="./images/loginIcon.png" width="30" height="30"/></a>
+            <a class="nav-link" href="#">Потребителско име</a>
+            <a class="nav-link" href="./index.html"><img id="logout" src="./images/logoutIcon.png" width="30" height="30"/></a>
           </form>
 
         </div>
 
       </nav>
 
-    </header>
+      </header>
 
-    <main role="main">
-  
-      <form class="register" method="post">
+       <main id="main" role="main">
 
-        <img class="mb-4" src="./images/maths.jpg" alt="maths" width="80" height="80">
+      <div class="carousel-item active" id="myCarousel">
 
-        <h2 class="h3 mb-3 font-weight-normal">Вписване</h2>
+        <img src="./images/indexImage1.jpg">
 
-        <label for="name">Потребителско име*</label>
-        <input type="text" id="name" class="field" placeholder="Име" required autofocus>
+        <div class="container">
 
-        <label for="password">Парола*</label>
-        <input type="password" id="password" class="field" placeholder="Парола" required>
+          <div class="carousel-caption text-right">
+            <h1>Математиката като предпочитано второ ДЗИ</h1>
+            <p>Ако и вие сте от зрелостниците насочили се към математиката, то това е най-подходящото място да започнете подготовката си.</p>
+          </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="check()">Вписване</button>
-
-        <a href="./registrationForm.html">Нямате регистрация все още?</a>
-
-      </form>
+        </div>
+        
+      </div>
 
       <div class="container marketing">
 
@@ -87,7 +86,7 @@
             <img class="rounded-circle" src="./images/indexImage2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Първи стъпки</h2>
             <p>Най-лесният и удобен начин за подготовка е чрез систематично минаване през материала. Именно тук можеш да откриеш задачите подредени по дялове и трудност!</p>
-            <p><a class="btn btn-secondary" href="./index.html" role="button">Детайли &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="./indexRegistered.html" role="button">Детайли &raquo;</a></p>
           </div>
 
           <div class="col-lg-4">
@@ -96,7 +95,7 @@
             <p>Секцията "Задачи без решения" предоставя възможност на регистрираните потребители да предизвикват себе си с малко по интересни задачи по материала.</p>
             <p><a class="btn btn-secondary" href="./loginForm.html" role="button">Детайли &raquo;</a></p>
           </div>
-
+          
         </div>
 
       </div>
@@ -110,10 +109,8 @@
       <script src="../../../../assets/js/vendor/popper.min.js"></script>
       <script src="./js/bootstrap.min.js"></script>
       <script src="../../../../assets/js/vendor/holder.min.js"></script>
-      <script src="./js/loginForm.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     </main>
-
   </body>
-  
 </html>

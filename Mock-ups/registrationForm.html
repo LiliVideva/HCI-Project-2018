@@ -27,24 +27,18 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Начало<span class="sr-only">(current)</span></a>
+           <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Начало</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Дялове на математиката
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <p class="dropdown-item">Алгебра</p>
-                <p class="dropdown-item">Геометрия</p>
-                <p class="dropdown-item">Стереометрия</p>
-                <p class="dropdown-item">Статистика</p>
-                <p class="dropdown-item">Аритметика</p>
-              </div>
+             <li class="nav-item">
+              <a class="nav-link" href="./index.html">Дялове на математиката</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled">Задачи без решения</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Премиум пакет</a>
             </li>
           </ul>
 
@@ -66,19 +60,19 @@
 
         <h2 class="h3 mb-3 font-weight-normal">Регистрация</h2>
 
-        <label for="name" class="sr-only">Име</label>
+        <label for="name">Потребителско име*</label>
         <input type="text" id="name" class="field" placeholder="Име" required autofocus>
 
-        <label for="email" class="sr-only">Email</label>
+        <label for="email">Email*</label>
         <input type="email" id="email" class="field" placeholder="Email" required>
 
-        <label for="password" class="sr-only">Парола</label>
+        <label for="password">Парола*</label>
         <input type="password" id="password" class="field" placeholder="Парола" required>
 
-        <label class="radio-inline"><input type="radio" name="radio" id="radio">Безплатен пакет</label>
-        <label class="radio-inline"><input type="radio" name="radio" id="radio">Премиум пакет</label>
+        <label for="password">Повтори парола*</label>
+        <input type="password" id="repeatPassword" class="field" placeholder="Повтори парола" required>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href = 'loginForm.html' ">Регистрация</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="check()">Регистрация</button>
 
         <a href="./loginForm.html">Вече сте регистриран?</a>
 
@@ -122,6 +116,7 @@
       <script src="../../../../assets/js/vendor/popper.min.js"></script>
       <script src="./js/bootstrap.min.js"></script>
       <script src="../../../../assets/js/vendor/holder.min.js"></script>
+      <script src="./js/registrationForm.js"></script>
 
     </main>
 

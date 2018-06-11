@@ -29,17 +29,30 @@ function result(){
   correctAnswer=correctAnswer.toFixed(2);
   if(correctAnswer == document.getElementById('answer').value) {
     $("#wrongAnswer").css("display","none");
+    $("#tryAgain").css("display","none");
     $("#correctAnswer").show();
+    $("#help").css("display","none");
+    $("#helpTheory").css("display","none");
     $("#check").css("display","none");
     $("hr").show();
     $("#usedTheory").show();
     $("#submit").show();
-    $("#solve").css("display","none");
   }
   else{
+    if($("#radio").is(':checked')) {
+      $("#solve").show();
+    }
+    else {
+      $("#solve").css("display","none");
+    }
     $("#correctAnswer").css("display","none");
     $("#wrongAnswer").show();
+    $("#tryAgain").show();
+    $("#helpTheory").css("display","none");
+    $("#help").css("display","none");
     $("#check").css("display","none");
+    $("#answer").css("display","none");
+    $("#retry").show();
     $("#back").show();
   }
 }
@@ -59,12 +72,15 @@ function theory(){
     $("#correctTheory").css("display","none");
     $("#wrongTheory").show();
     $("#usedTheory").css("display","none");
+    $("#helpTheory").show();
     $("#submit").css("display","none");
+    $("#solve").show();
     $("#back").show();
   }
 }
 
 $(document).ready(function() {
+  $("#helpTheory").css("display","none");
   $("#solution").css("display","none");
   $("#solve").css("display","none");
   $("#checkAnswer").css("display","none");
@@ -72,7 +88,12 @@ $(document).ready(function() {
   $("#submit").css("display","none");
   $("hr").css("display","none");
   $("#checkTheory").css("display","none");
+  $("#retry").css("display","none");
   $("#back").css("display","none");
+});
+
+$('#help').on('click', function(){
+  $("#helpTheory").show();
 });
 
 $('#check').on('click', function(){
@@ -84,7 +105,13 @@ $('#submit').on('click', function(){
 });
 
 $('#solve').on('click', function(){
+  if($("#radio").is(':checked')) {
+    $("#checkAnswer").css("display","none");
+    $("#retry").css("display","none");
+    $("#helpTheory").show();
+    }
   $("#solution").show();
+  $("#help").css("display","none");
   $("#solve").css("display","none");
   $("#check").css("display","none");
   $("#back").show();

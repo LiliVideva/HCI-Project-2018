@@ -10,8 +10,7 @@
     <title>Математика за матура</title>
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/offerSolution.css" rel="stylesheet">
+    <link href="./css/indexAdmin.css" rel="stylesheet">
   </head>
 
   <body>
@@ -30,22 +29,22 @@
 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Начало<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="./indexAdmin.html">Начало<span class="sr-only">(current)</span></a>
             </li>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="./mainPage.html">Дялове на математиката</a>
+              <a class="nav-link" href="./mainAdmin.html">Дялове на математиката</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="./noSolutionTasks.html">Задачи без решения</a>
+              <a class="nav-link" href="./noSolutionTasksAdmin.html">Задачи без решения</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./premiumPackage.html">Премиум пакет</a>
+              <a class="nav-link" href="./premiumPackageAdmin.html">Премиум пакет</a>
             </li>
           </ul>
 
           <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" href="#">Потребителско име</a>
+            <a class="nav-link" href="#">Администратор</a>
             <a class="nav-link" href="./index.html"><img id="logout" src="./images/logoutIcon.png" width="30" height="30"/></a>
           </form>
 
@@ -53,31 +52,24 @@
 
       </nav>
 
-    </header>
+      </header>
 
-     <main id="main" role="main">
+       <main id="main" role="main">
 
-       <div id="container-subjects" class="tab-pane fade in active">
+      <div class="carousel-item active" id="myCarousel">
 
-        <div class="thumbnail">
+        <img src="./images/indexImage1.jpg">
 
-          <h2>Задачи без решения</h2>
+        <div class="container">
 
-          <h3>Задача 1</h3>
-
-          <pre>При записване на всичките 17 данни от проведен експеримент се оказало, че числата в подредения статистически ред образуват 
-геометрична прогресия, като най-малкото от тях е 0,03125=2<sup>-5</sup>, а най-голямото е 2048=2<sup>11</sup>. Намерете медианата на тази извадка.</pre>
-
-          <pre>Решение:</pre>
-          <textarea id="solution"></textarea>
-
-          <pre>Използвани теоретични познания:</pre>
-          <textarea id="theory"></textarea>
-
-          <div class="text-bottom text-right" id="offer"><a href="./adminApproval.html" role="button" class="btn btn-primary btn-lg">Предложи<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+          <div class="carousel-caption text-right">
+            <h1>Математиката като предпочитано второ ДЗИ</h1>
+            <p>Ако и вие сте от зрелостниците насочили се към математиката, то това е най-подходящото място да започнете подготовката си.</p>
+            <p><a class="btn btn-lg btn-primary" href="./registrationForm.html" role="button">Регистриране</a></p>
+          </div>
 
         </div>
-
+        
       </div>
 
       <div class="container marketing">
@@ -95,7 +87,7 @@
             <img class="rounded-circle" src="./images/indexImage2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Първи стъпки</h2>
             <p>Най-лесният и удобен начин за подготовка е чрез систематично минаване през материала. Именно тук можеш да откриеш задачите подредени по дялове и трудност!</p>
-            <p><a class="btn btn-secondary" href="./index.html" role="button">Детайли &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="./indexAdmin.html" role="button">Детайли &raquo;</a></p>
           </div>
 
           <div class="col-lg-4">
@@ -119,7 +111,6 @@
       <script src="./js/bootstrap.min.js"></script>
       <script src="../../../../assets/js/vendor/holder.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     </main>
   </body>

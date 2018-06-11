@@ -31,20 +31,15 @@
             <li class="nav-item active">
               <a class="nav-link" href="./index.html">Начало<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Дялове на математиката
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <p class="dropdown-item">Алгебра</p>
-                <p class="dropdown-item">Геометрия</p>
-                <p class="dropdown-item">Стереометрия</p>
-                <p class="dropdown-item">Статистика</p>
-                <p class="dropdown-item">Аритметика</p>
-              </div>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="./main.html">Дялове на математиката</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link disabled">Задачи без решения</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Задачи без решения</a>
+              <a class="nav-link disabled">Премиум пакет</a>
             </li>
           </ul>
 
@@ -56,65 +51,23 @@
 
       </nav>
 
-    </header>
+      </header>
 
-    <main role="main">
+       <main id="main" role="main">
 
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-item active" id="myCarousel">
 
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        <img src="./images/indexImage1.jpg">
 
-        <div class="carousel-inner">
+        <div class="container">
 
-          <div class="carousel-item active">
-            <img class="first-slide" src="./images/indexImage1.jpg" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Математиката като предпочитано второ ДЗИ</h1>
-                <p>Ако и вие сте от зрелостниците насочили се към математиката, то това е най-подходящото място да започнете подготовката си.</p>
-                <p><a class="btn btn-lg btn-primary" href="./registrationForm.html" role="button">Регистриране</a></p>
-              </div>
-            </div>
+          <div class="carousel-caption text-right">
+            <h1>Математиката като предпочитано второ ДЗИ</h1>
+            <p>Ако и вие сте от зрелостниците насочили се към математиката, то това е най-подходящото място да започнете подготовката си.</p>
+            <p><a class="btn btn-lg btn-primary" href="./registrationForm.html" role="button">Регистриране</a></p>
           </div>
-
-          <div class="carousel-item">
-            <img class="second-slide" src="./images/indexImage2.jpg" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>От къде да започна?</h1>
-                <p>Лутате се измежду множеството издадени сборници, пълни с матури от минали години? Това няма да ви се наложи вече. Ние предлагаме удобно групиране на задачите пи дялове и трудност, което да ви улесни максимално систематизиранта подготовка.</p>
-                <p><a class="btn btn-lg btn-primary" href="./index.html" role="button">Научете повече</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img class="third-slide" src="./images/indexImage3.jpg" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>Главоблъсканици</h1>
-                <p>За зрелостниците, които обичат предизвикателствата сме подготвили специална секция "Задачи без решения", за да развият още повече мисленето си. Влезте в акаунта си и започнете да дерзаете!</p>
-                <p><a class="btn btn-lg btn-primary" href="./loginForm.html" role="button">Вписване</a></p>
-              </div>
-            </div>
-          </div>
-
         </div>
-
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Предишно</span>
-        </a>
-
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Следващо</span>
-        </a>
-
+        
       </div>
 
       <div class="container marketing">
@@ -141,7 +94,7 @@
             <p>Секцията "Задачи без решения" предоставя възможност на регистрираните потребители да предизвикват себе си с малко по интересни задачи по материала.</p>
             <p><a class="btn btn-secondary" href="./loginForm.html" role="button">Детайли &raquo;</a></p>
           </div>
-
+          
         </div>
 
       </div>
@@ -150,14 +103,13 @@
         <p class="footerHeading">&copy; 2017-2018 ELLE</p>
       </footer>
 
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../../../assets/js/vendor/popper.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="../../../../assets/js/vendor/holder.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     </main>
-
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="../../../../assets/js/vendor/holder.min.js"></script>
-
   </body>
-  
 </html>

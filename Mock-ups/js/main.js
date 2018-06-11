@@ -11,10 +11,17 @@ function closeNav() {
 $(document).ready(function() {
   $("#subj").children().css("display","none");
   $("#tasksHardness").children().css("display","none");
+  openNav();
 });
 
-$('a').on('click', function(){
+$('.dropdown-item').on('click', function(){
   var target = $(this).attr('rel');
   $("#"+target).show().siblings("div").hide();
-    $("#indexImage1").css("display","none");
+    $("#myCarousel").css("display","none");
+    document.getElementById("container-subjects").style.marginLeft = "20px";
+});
+
+$('.taskType').on('click', function(){
+  var target = $(this).attr('rel');
+  $("#"+target).show().siblings("div").hide();
 });

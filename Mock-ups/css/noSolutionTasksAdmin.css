@@ -24,7 +24,6 @@ form {
 
 h1{
   font-style: italic;
-  font-weight: bold;
   padding-bottom: 40px;
 }
 
@@ -37,38 +36,9 @@ h1{
   margin-bottom: 0;
 }
 
-.nav-item {
-  cursor: pointer;
-}
-
-.carousel {
-  margin-bottom: 4rem;
-}
-
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-  font-weight: bold;
-  color:#ff0066;
-  text-shadow: 2px 2px 8px #FFFFFF;
-}
-
-.carousel-item {
-  height: 32rem;
-  background-color: #777;
-}
-
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
-}
-
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 250px;
     margin-top: 40px;
     position: fixed;
      color: #3b7991;
@@ -81,7 +51,7 @@ h1{
     padding-top: 60px;
 }
 
-.sidenav a {
+.sidenav div {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
@@ -91,32 +61,53 @@ h1{
     background: none;
     width: 100%;
     text-align: left;
-    cursor: pointer;
     outline: none;
     transition: 0.3s;
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav div {font-size: 18px;}
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 20px 0 20px;
-    margin-top: 40px;
+#main{
+margin-top: 80px;
+}
+
+#main h2{
+  margin: 10px 20px;
+  display: inline;
+}
+
+.task { 
+  padding: 4px 10px; 
+  background-color: #fff; 
+  box-shadow: 0px 3px 5px 0px #aaa; 
+  border-radius: 0px; 
+  position: relative;
+  margin: 10px 20px 0 20px;
+  clear:both;
+  height: 100px;
+}
+
+.task h3{
+  display: inline;
+}
+
+.modify {
+  float:right;
+  display: inline;
+}
+
+.btn-primary {
+  margin-top: 10px;
+  float:right;
+  clear: both;
+}
+
+.btn-success {
+  margin: 10px;
+  float:right;
 }
 
 .marketing{

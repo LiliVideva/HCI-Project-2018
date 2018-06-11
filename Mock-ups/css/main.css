@@ -25,6 +25,7 @@ form {
 h1{
   font-style: italic;
   font-weight: bold;
+  color:#ff0066;
   padding-bottom: 40px;
 }
 
@@ -48,8 +49,6 @@ h1{
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
-  font-weight: bold;
-  color:#ff0066;
   text-shadow: 2px 2px 8px #FFFFFF;
 }
 
@@ -117,6 +116,38 @@ h1{
     transition: margin-left .5s;
     padding: 20px 0 20px;
     margin-top: 40px;
+}
+
+.nav-tabs a{
+  border: 2px solid black;
+  margin: 10px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color:blue;
+}
+
+#subj, .nav-tabs {
+  margin: 20px 0;
+}
+
+.theoryOptions{
+  width:250px;
+  float:right;
+}
+
+.thumbnail { 
+  padding: 4px 10px; 
+  background-color: #fff; 
+  box-shadow: 0px 3px 5px 0px #aaa; 
+  border-radius: 0px; 
+  position: relative;
+  margin-right: 20px;
+  margin-top: 10px;
 }
 
 .marketing{

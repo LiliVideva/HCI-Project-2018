@@ -10,8 +10,7 @@
     <title>Математика за матура</title>
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/mainPage.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
   </head>
 
   <body>
@@ -29,24 +28,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Начало<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Начало</a>
             </li>
+            </li>
+             <li class="nav-item active">
+              <a class="nav-link" href="./main.html">Дялове на математиката<span class="sr-only">(current)</span></a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" onclick="openNav()">Дялове на математиката</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="./noSolutionTasks.html">Задачи без решения</a>
+              <a class="nav-link disabled">Задачи без решения</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./premiumPackage.html">Премиум пакет</a>
+              <a class="nav-link disabled">Премиум пакет</a>
             </li>
           </ul>
 
           <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" href="#">Потребителско име</a>
-            <a class="nav-link" href="./index.html"><img id="logout" src="./images/logoutIcon.png" width="30" height="30"/></a>
+            <a class="nav-link" href="./loginForm.html"><img src="./images/loginIcon.png" width="30" height="30"/></a>
           </form>
 
         </div>
@@ -55,7 +53,7 @@
 
     </header>
 
-    <div id="mySidenav" class="sidenav">
+     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a class="dropdown-item" rel="algebra">Алгебра</a>
       <a class="dropdown-item" rel="geometry">Геометрия</a>
@@ -64,186 +62,228 @@
       <a class="dropdown-item" rel="arithmetics">Аритметика</a>
     </div>
 
-    <img id="indexImage1" src="./images/indexImage1.jpg"/>
-
     <main id="main" role="main">
 
-      <div id="container-subjects">
+      <div class="carousel-item active" id="myCarousel">
+        <img src="./images/indexImage2.jpg">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Добре дошли! Време е за математика!</h1>
+          </div>
+        </div>
+      </div>
+
+     <div id="container-subjects">
 
         <div id="subj">
 
           <div id="algebra">
             <h3>Алгебра</h3>
             <ul class="nav nav-tabs">
-              <li><a href="#veryEasy" data-toggle="tab">Много лесни задачи</a></li>
-              <li><a href="#easy" data-toggle="tab">Лесни задачи</a></li>
-              <li><a href="#midHard" data-toggle="tab">Средно трудни задачи</a></li>
-              <li><a href="#hard" data-toggle="tab">Трудни задачи</a></li>
-              <li><a href="#veryHard" data-toggle="tab">Много трудни задачи</a></li>
+              <li><a class="taskType" rel="veryEasy" data-toggle="tab">Много лесни задачи</a></li>
+              <li><a class="taskType" rel="easy" data-toggle="tab">Лесни задачи</a></li>
+              <li><a class="taskType" rel="midHard" data-toggle="tab">Средно трудни задачи</a></li>
+              <li><a class="taskType" rel="hard" data-toggle="tab">Трудни задачи</a></li>
+              <li><a class="taskType" rel="veryHard" data-toggle="tab">Много трудни задачи</a></li>
             </ul>
+            <hr/>
           </div>
 
           <div id="geometry">
             <h3>Геометрия</h3>
-            <ul class="nav nav-tabs">
-              <li><a href="#veryEasy" data-toggle="tab">Много лесни задачи</a></li>
-              <li><a href="#easy" data-toggle="tab">Лесни задачи</a></li>
-              <li><a href="#midHard" data-toggle="tab">Средно трудни задачи</a></li>
-              <li><a href="#hard" data-toggle="tab">Трудни задачи</a></li>
-              <li><a href="#veryHard" data-toggle="tab">Много трудни задачи</a></li>
+           <ul class="nav nav-tabs">
+              <li><a class="taskType" rel="veryEasy" data-toggle="tab">Много лесни задачи</a></li>
+              <li><a class="taskType" rel="easy" data-toggle="tab">Лесни задачи</a></li>
+              <li><a class="taskType" rel="midHard" data-toggle="tab">Средно трудни задачи</a></li>
+              <li><a class="taskType" rel="hard" data-toggle="tab">Трудни задачи</a></li>
+              <li><a class="taskType" rel="veryHard" data-toggle="tab">Много трудни задачи</a></li>
             </ul>
+            <hr/>
           </div>
 
           <div id="stereometry">
             <h3>Стереометрия</h3>
             <ul class="nav nav-tabs">
-              <li><a href="#veryEasy" data-toggle="tab">Много лесни задачи</a></li>
-              <li><a href="#easy" data-toggle="tab">Лесни задачи</a></li>
-              <li><a href="#midHard" data-toggle="tab">Средно трудни задачи</a></li>
-              <li><a href="#hard" data-toggle="tab">Трудни задачи</a></li>
-              <li><a href="#veryHard" data-toggle="tab">Много трудни задачи</a></li>
+              <li><a class="taskType" rel="veryEasy" data-toggle="tab">Много лесни задачи</a></li>
+              <li><a class="taskType" rel="easy" data-toggle="tab">Лесни задачи</a></li>
+              <li><a class="taskType" rel="midHard" data-toggle="tab">Средно трудни задачи</a></li>
+              <li><a class="taskType" rel="hard" data-toggle="tab">Трудни задачи</a></li>
+              <li><a class="taskType" rel="veryHard" data-toggle="tab">Много трудни задачи</a></li>
             </ul>
+            <hr/>
           </div>
 
           <div id="statistics">
             <h3>Статистика</h3>
             <ul class="nav nav-tabs">
-              <li><a href="#veryEasy" data-toggle="tab">Много лесни задачи</a></li>
-              <li><a href="#easy" data-toggle="tab">Лесни задачи</a></li>
-              <li><a href="#midHard" data-toggle="tab">Средно трудни задачи</a></li>
-              <li><a href="#hard" data-toggle="tab">Трудни задачи</a></li>
-              <li><a href="#veryHard" data-toggle="tab">Много трудни задачи</a></li>
+              <li><a class="taskType" rel="veryEasy" data-toggle="tab">Много лесни задачи</a></li>
+              <li><a class="taskType" rel="easy" data-toggle="tab">Лесни задачи</a></li>
+              <li><a class="taskType" rel="midHard" data-toggle="tab">Средно трудни задачи</a></li>
+              <li><a class="taskType" rel="hard" data-toggle="tab">Трудни задачи</a></li>
+              <li><a class="taskType" rel="veryHard" data-toggle="tab">Много трудни задачи</a></li>
             </ul>
+            <hr/>
           </div>
 
           <div id="arithmetics">
             <h3>Аритметика</h3>
             <ul class="nav nav-tabs">
-              <li><a href="#veryEasy" data-toggle="tab">Много лесни задачи</a></li>
-              <li><a href="#easy" data-toggle="tab">Лесни задачи</a></li>
-              <li><a href="#midHard" data-toggle="tab">Средно трудни задачи</a></li>
-              <li><a href="#hard" data-toggle="tab">Трудни задачи</a></li>
-              <li><a href="#veryHard" data-toggle="tab">Много трудни задачи</a></li>
+              <li><a class="taskType" rel="veryEasy" data-toggle="tab">Много лесни задачи</a></li>
+              <li><a class="taskType" rel="easy" data-toggle="tab">Лесни задачи</a></li>
+              <li><a class="taskType" rel="midHard" data-toggle="tab">Средно трудни задачи</a></li>
+              <li><a class="taskType" rel="hard" data-toggle="tab">Трудни задачи</a></li>
+              <li><a class="taskType" rel="veryHard" data-toggle="tab">Много трудни задачи</a></li>
             </ul>
+            <hr/>
           </div>
 
         </div>
 
         <div id="tasksHardness" class="tab-content">
 
-          <div id="veryEasy" class="tab-pane fade in active">
+          <div id="veryEasy" class="tab-pane">
+
             <div class="thumbnail">
                 <h3>Задача 1 - "Много лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
              <div class="thumbnail">
                 <h3>Задача 2 - "Много лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 3 - "Много лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
            <div class="thumbnail">
                 <h3>Задача 4 - "Много лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 5 - "Много лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
           </div>
 
-          <div id="easy" class="tab-pane fade">
+          <div id="easy" class="tab-pane">
+
             <div class="thumbnail">
                 <h3>Задача 1 - "Лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
              <div class="thumbnail">
                 <h3>Задача 2 - "Лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 3 - "Лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
            <div class="thumbnail">
                 <h3>Задача 4 - "Лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 5 - "Лесни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
           </div>
 
-          <div id="midHard" class="tab-pane fade">
+          <div id="midHard" class="tab-pane">
+
             <div class="thumbnail">
                 <h3>Задача 1 - "Средно трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
              <div class="thumbnail">
                 <h3>Задача 2 - "Средно трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 3 - "Средно трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
            <div class="thumbnail">
                 <h3>Задача 4 - "Средно трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 5 - "Средно трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
           </div>
 
-          <div id="hard" class="tab-pane fade">
+          <div id="hard" class="tab-pane">
+
             <div class="thumbnail">
                 <h3>Задача 1 - "Трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
              <div class="thumbnail">
                 <h3>Задача 2 - "Трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 3 - "Трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
            <div class="thumbnail">
                 <h3>Задача 4 - "Трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 5 - "Трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
           </div>
 
-          <div id="veryHard" class="tab-pane fade">
+          <div id="veryHard" class="tab-pane">
+
             <div class="thumbnail">
                 <h3>Задача 1 - "Много трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
              <div class="thumbnail">
                 <h3>Задача 2 - "Много трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 3 - "Много трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
            <div class="thumbnail">
                 <h3>Задача 4 - "Много трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+
             <div class="thumbnail">
                 <h3>Задача 5 - "Много трудни задачи"</h3>
                 <div class="text-bottom text-right"><a href="./trainingTask.html" role="button" class="btn btn-primary">Решаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
+            
           </div>
            
         </div>
@@ -288,8 +328,7 @@
       <script src="./js/bootstrap.min.js"></script>
       <script src="../../../../assets/js/vendor/holder.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="./js/mainPage.js"></script>
+      <script src="./js/main.js"></script>
 
     </main>
   </body>

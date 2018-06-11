@@ -11,7 +11,7 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/trainingTask.css" rel="stylesheet">
+    <link href="./css/trainingTaskAdmin.css" rel="stylesheet">
   </head>
 
   <body>
@@ -20,7 +20,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
 
-        <a class="navbar-brand" href="./index.html">Математика за матура</a>
+        <a class="navbar-brand" href="./indexAdmin.html">Математика за матура</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,22 +30,23 @@
 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">Начало</a>
+              <a class="nav-link" href="./indexAdmin.html">Начало</a>
             </li>
             </li>
              <li class="nav-item active">
-              <a class="nav-link" href="./main.html">Дялове на математиката<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="./mainAdmin.html">Дялове на математиката<span class="sr-only">(current)</span></a>
             </li>
              <li class="nav-item">
-              <a class="nav-link disabled">Задачи без решения</a>
+              <a class="nav-link" href="./noSolutionTasksAdmin.html">Задачи без решения</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Премиум пакет</a>
+              <a class="nav-link" href="./premiumPackageAdmin.html">Премиум пакет</a>
             </li>
           </ul>
 
-         <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" href="./loginForm.html"><img src="./images/loginIcon.png" width="30" height="30"/></a>
+          <form class="form-inline my-2 my-lg-0">
+            <a class="nav-link" href="#">Администратор</a>
+            <a class="nav-link" href="./index.html"><img id="logout" src="./images/logoutIcon.png" width="30" height="30"/></a>
           </form>
 
         </div>
@@ -62,14 +63,30 @@
 
           <h2>Геометрия</h2>
 
+          <div id="premium">
+            <input type="radio" id="radio">Премиум потребител
+          </div>
+
           <h3>Задача 1 - "Много лесни задачи" <div id="timer"><label id="minutes">00</label>:<label id="seconds">00</label></div></h3>
-
+            <div class="modify">
+              <a href="#"><img id="edit" src="./images/editIcon.jpg" width="40" height="40"/></a>
+              <a href="#"><img id="delete" src="./images/deleteIcon.jpg" width="40" height="40"/></a>
+            </div>
           <pre>Катетите на правоъгълен триъгълник са с дължини 6cm и 10cm.
-Радиусът на описаната около триъгълника окръжност е: <input type="text" id="answer"></input> (с точност: 0.00)</pre>
+Радиусът на описаната около триъгълника окръжност е: <input type="text" id="answer" /> (с точност: 0.00)</pre>
 
-          <pre id="checkAnswer">Отговорът Ви за задачата е: <span id="correctAnswer">верен</span><span id="wrongAnswer">грешен</span></pre>
+          <div class="modify" id="checkAnswerModify">
+              <a href="#"><img id="edit" src="./images/editIcon.jpg" width="40" height="40"/></a>
+              <a href="#"><img id="delete" src="./images/deleteIcon.jpg" width="40" height="40"/></a>
+            </div>
+          <pre id="checkAnswer">Отговорът Ви за задачата е: <span id="correctAnswer">верен</span> <span id="wrongAnswer">грешен</span> <span id="tryAgain">Опитайте отново!</span></pre>
 
           <hr>
+
+           <div class="modify">
+            <a href="#"><img id="edit" src="./images/editIcon.jpg" width="40" height="40"/></a>
+            <a href="#"><img id="delete" src="./images/deleteIcon.jpg" width="40" height="40"/></a>
+          </div>
 
           <pre id="usedTheory">Използвани теоретични познания:
 <select id="theoryOptions">
@@ -124,7 +141,25 @@
 
 </select>
 </pre>
-          <pre id="checkTheory">Отговорът Ви за теорията е: <span id="correctTheory">верен</span><span id="wrongTheory">грешен</span></pre>
+
+           <div class="modify" id="checkTheoryModify">
+            <a href="#"><img id="edit" src="./images/editIcon.jpg" width="40" height="40"/></a>
+            <a href="#"><img id="delete" src="./images/deleteIcon.jpg" width="40" height="40"/></a>
+          </div>
+
+          <pre id="checkTheory">Отговорът Ви за теорията е: <span id="correctTheory">верен</span> <span id="wrongTheory">грешен</span></pre>
+
+           <div class="modify" id="helpTheoryModify">
+            <a href="#"><img id="edit" src="./images/editIcon.jpg" width="40" height="40"/></a>
+            <a href="#"><img id="delete" src="./images/deleteIcon.jpg" width="40" height="40"/></a>
+          </div>
+
+          <pre id="helpTheory">Използвани теоретични познания: <span id="pitTheorem">Питагорова теорема</span></pre>
+
+           <div class="modify" id="solutionModify">
+            <a href="#"><img id="edit" src="./images/editIcon.jpg" width="40" height="40"/></a>
+            <a href="#"><img id="delete" src="./images/deleteIcon.jpg" width="40" height="40"/></a>
+          </div>
 
           <pre id="solution">
 Решение:
@@ -143,13 +178,17 @@ R=5.83
 Отговорът на задачата е: 5.83
 </pre>
 
+          <div class="text-bottom text-left" id="help"><a role="button" class="btn btn-info btn-lg">Помощ<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+
           <div class="text-bottom text-left" id="solve"><a role="button" class="btn btn-info btn-lg">Решение<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
 
-          <div class="text-bottom text-right" id="check"><a onclick="result()" role="button" class="btn btn-primary btn-lg">Предаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+          <div class="text-bottom text-right" id="check"><a role="button" class="btn btn-primary btn-lg">Предаване<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
 
-          <div class="text-bottom text-right" id="submit"><a onclick="theory()" role="button" class="btn btn-primary btn-lg">Теория<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+          <div class="text-bottom text-right" id="submit"><a role="button" class="btn btn-primary btn-lg">Теория<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
 
-          <div class="text-bottom text-right" id="back"><a href="./main.html" role="button" class="btn btn-primary btn-lg">Назад<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+          <div class="text-bottom text-right" id="retry"><a href="./trainingTaskAdmin.html" role="button" class="btn btn-primary btn-lg">Повторен опит<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+
+          <div class="text-bottom text-right" id="back"><a href="./mainAdmin.html" role="button" class="btn btn-primary btn-lg">Назад<i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
 
       </div>
 
@@ -170,7 +209,7 @@ R=5.83
             <img class="rounded-circle" src="./images/indexImage2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Първи стъпки</h2>
             <p>Най-лесният и удобен начин за подготовка е чрез систематично минаване през материала. Именно тук можеш да откриеш задачите подредени по дялове и трудност!</p>
-            <p><a class="btn btn-secondary" href="./index.html" role="button">Детайли &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="./indexAdmin.html" role="button">Детайли &raquo;</a></p>
           </div>
 
           <div class="col-lg-4">
@@ -195,7 +234,7 @@ R=5.83
       <script src="../../../../assets/js/vendor/holder.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="./js/trainingTask.js"></script>
+      <script src="./js/trainingTaskAdmin.js"></script>
 
     </main>
   </body>

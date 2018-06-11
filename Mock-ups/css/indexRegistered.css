@@ -24,6 +24,7 @@ form {
 
 h1{
   font-style: italic;
+  font-weight: bold;
   padding-bottom: 40px;
 }
 
@@ -36,10 +37,33 @@ h1{
   margin-bottom: 0;
 }
 
-#indexImage1{
-  position: relative;
-  width:100%;
-  height:60%;
+.nav-item {
+  cursor: pointer;
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+  font-weight: bold;
+  color:#ff0066;
+  text-shadow: 2px 2px 8px #FFFFFF;
+}
+
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
 }
 
 .sidenav {
@@ -91,7 +115,7 @@ h1{
 
 #main {
     transition: margin-left .5s;
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 20px;
     margin-top: 40px;
 }
 
@@ -117,24 +141,3 @@ h1{
 .footerHeading{
   text-align: center;
 }
-
-.theoryOptions{
-  width:250px;
-  float:right;
-}
-
-.thumbnail { 
-  padding: 4px 10px; 
-  background-color: #fff; 
-  box-shadow: 0px 3px 5px 0px #aaa; 
-  border-radius: 0px; 
-  position: relative;
-  margin-right: 20px;
-  margin-top: 10px;
-}
-
-.pagination{
-  float:right;
-  margin-right: 20px;
-}
-
